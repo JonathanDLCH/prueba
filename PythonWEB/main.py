@@ -3,6 +3,17 @@ from flask import render_template, request
 
 app= Flask(__name__)
 
+#callback
+@app.before_request
+def before_request():
+    print('Antes de la petición')
+
+@app.after_request
+def after_request(response):
+    print('Despues de la petición')
+    return response
+
+
 @app.route('/')
 def index():
     name = 'nombre'
@@ -21,6 +32,10 @@ def datos():
     curso = request.args.get('curso','')
     return 'Listado de datos: ' + nombre + ', curso:' + curso
 
+@app.route('/about')
+def about():
+    print('Estamos en el about')
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=9000)

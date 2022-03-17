@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMesoamericana</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+{% extends 'base.html'%}
+
+{% block content %}
     <img src="{{ url_for('static', filename='images/logo.jpg' )}}" alt="logo">
     <h2>Aplicación Mesoamericana</h2>
     <p>Ingreso como tipo: {{tipo}}</p>
@@ -35,5 +28,4 @@
             <p>Bienvenido {{username}} entro como invitado</p>
     {%endif%}
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
-</html>
+{% endblock%}
