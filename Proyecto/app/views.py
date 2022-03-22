@@ -9,4 +9,4 @@ def page_not_found(error):
 
 @page.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', title='Name-App')

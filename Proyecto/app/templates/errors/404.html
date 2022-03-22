@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404</title>
-</head>
-<body>
-    <h2>Error 404,No se encontro esta página regrese a la página inicial.</h2>
-</body>
-</html>
+{% extends 'bootstrap/base.html'%}
+
+{% block title %}
+    Error 404
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>404 Not found</h2>
+                <p>Lo sentimos un error ha ocurrido, página no encontrada</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
